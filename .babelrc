@@ -1,0 +1,13 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    ["transform-runtime",
+       { // 插件
+      "helpers": true, // 把helper 都打包为公共组件
+      "polyfill": true, // 把polufill 都打包为公共组件
+      "regenerator": true, // regenerator 都打包为公共组件
+      "moduleName": "babel-runtime"
+    }]
+  ]
+}
+//  此时，webpack打包的时候，会自动优化重复引入公共方法的问题。
